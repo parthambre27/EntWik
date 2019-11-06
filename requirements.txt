@@ -8,7 +8,7 @@ django-cors-headers==2.1.0
 django-extensions==2.2.3
 django-filter==1.0.4
 django-storages==1.7.2
-djangorestframework==3.6.4
+djangorestframework==3.9.1
 dropbox==9.4.0
 gunicorn==19.6.0
 idna==2.5
