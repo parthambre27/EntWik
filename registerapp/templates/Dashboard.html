@@ -1,0 +1,68 @@
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/e30a91579f.js" crossorigin="anonymous"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <link rel="icon" href="{% static 'img/favicon.ico' }">
+</head>
+<body> 
+     <form method="POST" id="msform" enctype="multipart/form-data">
+	     <h1>App Title</h1>
+		 <!--All the values in input and textarea should be entered from the database.
+		     changes made in the editable fields must be updated in the database-->
+		 <div class="form-content">
+		      <div class="circle">
+                  <!-- User Profile Image -->
+                 <img class="profile-pic" src="{{images}}">
+	             <div class="p-image">
+                     <i  class="fa fa-edit upload-button"></i>
+                     <input class="file-upload" name="newimg" id="newimg" type="file" accept="image/*"/>
+                 </div>
+              </div>
+			  <!-- this is the status of the app which will be pending by default. We can change it to approved, uploaded or rejected.
+			  Changes made in the database should be reflected here-->
+			  <p>Status: Pending</p>
+              <textarea required placeholder="Short Description*" name="shortdesc" id="shortdesc">{{shortdesc}}</textarea>
+	          <textarea required placeholder="Long Description*" name="longdesc" id="longdesc">{{longdesc}}</textarea>
+		      <input type="text" name="privpolicy" id="privpolicy" value="{{privpolicy}}" placeholder="Privacy Policy link (optional)"/>
+		      <input type="text" name="promovideo" id="promovideo" value="{{promovideo}}" placeholder="Promo Video link (optional)" />
+			  <input required readonly="readonly" class="uneditable" value="{{name}}" type="text" name="name" placeholder="Name*" />
+             <input required value="{{email}}" type="email" id="email" name="email" placeholder="Email Id*" />
+             <input required readonly="readonly" class="uneditable" value="{{phone}}" type="tel" name="phone" placeholder="Phone Number with Country Code*" />
+	     </div>
+		 
+		 <input type="submit" id="submit" name="submit" class="submit" value="Save" />
+	 </form>
+	 <script src="{% static 'js/dashboard.js' %}"></script>
+</body>
+<script>
+	$("form#msform").submit(function(e) {
+		  e.preventDefault();    
+		  var formData = new FormData(this);
+		  
+		  
+		  $.ajax({
+			  url: window.location.pathname,
+			  type: 'POST',
+			  data: formData,
+			  success: function(data, status, xhr) {
+				if (data["message"] == 1) {
+				  alert("Details Updated");
+				  document.location = "/dashboard/";
+				} else {
+				  alert("Invalid credentials!");
+				  document.location = ""
+				}
+			  },
+			  
+			  cache: false,
+			  contentType: false,
+			  processData: false
+		  });
+	  });
+	</script>

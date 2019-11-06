@@ -1,0 +1,167 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body{
+	background-color: #D3E7EC;
+}
+
+h1, h2, h3{
+     font-family: 'Poppins', sans-serif;
+}
+
+ p{
+	  font-family: 'Roboto', sans-serif;
+  }
+  
+  #logo{
+	  margin: auto;
+	  height: 100px;
+	  width: 100px;
+  }
+  
+  #top{
+	  background-color: #174C57;
+	  color: #FAF5FA;
+	  padding: 30px;
+	  background: rgba(255,0,132,1);
+background: linear-gradient(0deg, rgba(23,76,87,1) 0%, rgba(104,139,149,1) 100%);
+margin-bottom: 60px;
+  }
+  
+  #top h1{
+	  font-size: 70px;
+	  margin: 30px auto 20px;
+  }
+  
+   #top p{
+	  font-size: 20px;
+	  width: 950px;
+	  margin: auto;
+	  margin-bottom: 30px;
+	  text-align: justify;
+	  text-align-last: center;
+  }
+  
+  #qs h2{
+	  font-size: 25px;
+	  width: 800px;
+	  margin-bottom: 10px;
+	  color: #A0A1A5;
+	  
+  }
+  
+  #qs h1{
+	  font-size: 120px;
+	  color:#6696a3;
+	  
+  }
+  
+  #qs p{
+	   font-size: 18px;
+	   	  width: 800px;
+		  color: #54575D;
+		  margin-bottom: 40px;
+  }
+  
+  #qs h2:nth-of-type(odd){
+	  float: left;
+	  margin-left: calc( (100vw - 1000px) / 2 );
+	  text-align: left;
+  }
+  
+   #qs p:nth-of-type(odd) {
+	  float: left;
+	  margin-left: calc( (100vw - 1000px) / 2 );
+	  text-align: justify;
+	  text-align-last: left;
+  }
+  
+   #qs h2:nth-of-type(even){
+	  float: right;
+	  margin-right: calc( (100vw - 1000px) / 2 );
+	  text-align: right;
+  }
+  
+   #qs p:nth-of-type(even) {
+	  float: right;
+	  margin-right: calc( (100vw - 1000px) / 2 );
+	  text-align: justify;
+	  text-align-last: right;
+  }
+  
+ #qs h1:nth-of-type(odd){
+	  float: right;
+	  margin-right: calc( (100vw - 1000px) / 2 );
+	  text-align: right;
+  }
+  
+  #qs h1:nth-of-type(even){
+	  float: left;
+	  margin-left: calc( (100vw - 1000px) / 2 );
+	  text-align: left;
+  }
+  
+  footer {
+	  margin-top: 100px;
+ 	padding-top: 10px;
+	padding-bottom: 7px;
+    background-color: #54575D;
+	width: 100%;
+	color: #D3E7EC;
+}
+
+.copyright {
+    margin-top: 0px;
+}
+  
+  @media screen and (max-width: 768px){
+	  
+	   #logo{
+	  height: 70px;
+	  width: 70px;
+  }
+	  
+ #top h1{
+	  font-size: 40px;
+  }
+  
+   #top p{
+	  width: 300px;
+  }
+	
+	  #qs h2{
+	  font-size: 25px;
+	  width: 320px;
+	   margin: 0 auto 10px !important;
+	  text-align: center !important;
+	  float: none !important;
+	 
+	  
+  }
+  
+  #qs h1{
+	 display: none;
+  }
+  
+  #qs p{
+	   font-size: 18px;
+	   	  width: 320px;
+		  color: #54575D;
+		   margin: 0 auto 70px !important;
+		  float: none !important;
+		  text-align: justify !important;
+		  text-align-last: center !important;
+  }
+  
+	
+  }
+  
+  .clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

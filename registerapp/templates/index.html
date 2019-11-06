@@ -1,0 +1,344 @@
+{% load static %}
+   <head>
+         <title>EntWik</title>
+		 <meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		 <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
+		 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+		 <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+		 <script src="https://kit.fontawesome.com/e30a91579f.js" crossorigin="anonymous"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   </head>
+   <body class="no-scroll">
+         <header class="header">
+               <div class="burger">
+              <div class="burger__patty"></div>
+              <div class="burger__patty"></div>
+              <div class="burger__patty"></div>
+        </div>
+		<div class="head-logo">
+		    <img id="logo1" src="{% static 'img/logo.png' %}"></img>
+		    <img id="logo2" src="{% static 'img/logo1.png' %}"></img>
+		</div>
+        
+        <nav class="menu">
+          <div class="menu__brand">
+             <a href=""><img class="logo" src="{% static 'img/logo.png' %}"></img></a>
+          </div>
+          <ul class="menu__list">
+		     <li class="menu__item"><a href="/about	" target="blank" class="menu__link">About Us</a></li>
+             <li class="menu__item"><a href="#points" class="menu__link">Why connect with us?</a></li>
+             <li class="menu__item"><a href="#our-apps" class="menu__link">Our Apps</a></li>
+			 <li class="menu__item"><a href="#testimonials" class="menu__link">Testimonials</a></li>
+			 <li class="menu__item"><a href="/faq" target="blank" class="menu__link">FAQ</a></li>
+			 <li class="menu__item"><a href="/login" target="blank" class="menu__link">Login</a></li>
+             
+          </ul>
+       </nav>
+      </header>   
+	     <section id="loader">
+		     <img src="{% static 'img/logo.png' %}"></img>
+		 </section>
+		 <section id="showcase">
+		     
+		     <img src="{% static 'img/logo.png' %}" class="animation null"></img>
+			 <img src="{% static 'img/bg-left.png' %}" class="bg bg-left"></img>
+			 <img src="{% static 'img/bg-right.png' %}" class="bg bg-right"></img>
+			 <h1 class="animation null">Get millions of downloads on your Android app for <br>FREE.</h1>
+			 <h2 class="animation null">We invest in your app to publish, promote and market it.</h2>
+			 <a href="/register" target="blank"><button class="animation null"><i class="fas fa-file-upload"></i>&nbsp;UPLOAD</button></a>
+		 </section> 
+         <section id="points" > 
+		     <h1 class="animation-element">Why connect with us?</h1>
+		     <div class="stack animation-element"> 
+			     <div class="card">
+				     <h2><i class="fas fa-globe"></i></h2>
+						<h3>Marketing<br> Team</h3>
+						<p>A fleet of agile marketing experts who are devoted
+						to your app so that it reaches millions of users</p>
+				 </div>
+			 </div>
+			 <div class="stack animation-element"> 
+			     <div class="card">
+					 <h2><i class="fas fa-laptop-code"></i></h2>
+					   <h3>Developers &amp; Debuggers</h3>
+					   <p>A group of proactive developers to remove bugs from your app so that you sleep in peace</p>
+				 </div>
+				 </div>
+			 </div>
+			 
+			 <div class="stack animation-element"> 
+			     <div class="card">
+				     <h2><i class="fas fa-coins"></i></h2>
+						<h3>Angel<br> Investments</h3>
+						<p>We are ready to invest upto $500 in your app so that you breathe the fresh breeze of success</p>
+				 </div>
+			 </div>
+			 
+    <div class="carousel animation-element ">
+        <div class="carousel-viewport">
+            <ul class="carousel-list">
+                <li class="carousel-item carousel-item_isSelected">
+				    <div class="card-car">
+	                    <h2><i class="fas fa-globe"></i></h2>
+						<h3>Marketing<br> Team</h3>
+						<p>A fleet of agile marketing experts who are devoted
+						to your app so that it reaches millions of users</p>
+				 </div>
+				</li>
+                <li class="carousel-item">
+				   <div class="card-car">
+				       <h2><i class="fas fa-laptop-code"></i></h2>
+					   <h3>Developers &amp; Debuggers</h3>
+					   <p>A group of proactive developers to remove bugs from your app so that you sleep in peace</p>
+				 </div>
+				</li>
+                <li class="carousel-item">
+				    <div class="card-car">
+					    <h2><i class="fas fa-coins"></i></h2>
+						<h3>Angel<br> Investments</h3>
+						<p>We are ready to invest upto $500 in your app so that you breathe the fresh breeze of success</p>
+				 </div>
+				</li>
+            </ul>
+            <a class="carousel-nav carousel-nav_prev js-carousel-nav_prev"><span class="arrow arrow_left"></span></a>
+            <a class="carousel-nav carousel-nav_next js-carousel-nav_next"><span class="arrow arrow_right"></span></a>
+            <nav class="carousel-bulletNav"></nav>
+        </div>    
+    </div>
+		 </section>
+
+		 
+		 
+		 <section id="our-apps">
+		     <h1 class="animation-element">Our Apps</h1>
+			 <div class="app-container animation-element">
+			     <div class="blur">
+				     
+				 </div>
+			     <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>
+				 <div class="app">
+				     <a href="#our-apps"><abbr title="App Name"><img></img></abbr></a>
+				 </div>		
+                 <button id="app-hide">SHOW LESS</button>				 
+			 </div>
+			 <button id="app-show" class="animation-element">SHOW MORE</button>
+		 </section>
+		 <section id="testimonials">
+		     <h1 class="animation-element">Testimonials</h1>
+			 <div class="testi-container clearfix">
+			     <div class="testi-box animation-element" animation-element>
+				     <h2><i class="fas fa-quote-left"></i>  &nbsp; &nbsp;Rudraksh, Superhero.io</h2>
+					 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt rhoncus erat.<p>
+				 </div>
+			     <div class="testi-box animation-element">
+				     <h2>Rudraksh, Superhero.io  &nbsp; &nbsp;<i class="fas fa-quote-right"></i></h2>
+					 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt rhoncus erat.<p>
+				</div>
+			     <div class="testi-box animation-element">
+				     <h2><i class="fas fa-quote-left"></i>  &nbsp; &nbsp;Rudraksh, Superhero.io</h2>
+					 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt rhoncus erat.<p>
+				 </div>
+				 <div class="testi-box animation-element">
+				     <h2>Rudraksh, Superhero.io   &nbsp; &nbsp;<i class="fas fa-quote-right"></i></h2>
+					 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tincidunt rhoncus erat.<p>
+				 </div>
+			 </div>
+         </section>
+		   
+		  <section id="yt" class="animation-element">
+              <iframe src="https://www.youtube.com/embed/VYTNGQsXp3Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         </section>		  
+		   
+		 <footer>
+		     <div class="footer-links"><a>TESTIMONIALS</a></div>
+			 <div class="footer-links"><a>WHY CONNECT WITH US</a></div>
+			 <div class="footer-links"><a>OUR APPS</a></div>
+			 <div class="footer-links mobile"><a>BLOG</a></div>
+			 <div class="footer-links mobile"><a>ABOUT US</a></div>
+			 <div class="footer-links"><a>LOGIN</a></div>
+			 <div class="footer-links"><a>UPLOAD FORM</a></div>
+			 <div class="footer-links"><a>HOME</a></div>
+			 <div class="footer-links mobile"><a>FAQ</a></div>
+		     <div class="social">
+			     <div class="social-box">
+			     <a href="footer" target="blank"><div class="social-links">
+				     <h1><i class="fab fa-facebook-f"></i></h1>
+				 </div></a>
+				 <h5>Facebook</h5>
+				 </div>
+				 <div class="social-box">
+				 <a href="footer" target="blank"><div class="social-links">
+				     <h1><i class="fab fa-instagram"></i></h1>
+				 </div></a>
+				 <h5>Instagram</h5>
+				 </div>
+				 <div class="social-box">
+				 <a href="footer" target="blank"><div class="social-links">
+				     <h1><i class="fab fa-youtube"></i></h1>
+				 </div></a>
+				 <h5>Youtube</h5>
+				 </div>
+				 <div class="social-box" >
+				 <a href="footer" target="blank"><div class="social-links">
+				     <h1><i class="fab fa-linkedin"></i></h1>
+				 </div></a>
+				 <h5>LinkedIn</h5>
+				 </div>
+			 </div>
+		     <h2>We are based in Varanasi, India.</h2>
+			 <h4>We work with clients from all over the world. Get in touch with us!</h4>		 
+		     <p><i class="fas fa-envelope"></i>&nbsp;team.entwik@gmail.com</p> 
+			 <p><i class="fas fa-phone"></i>&nbsp;9602179666</p> 
+			 <p><i class="fas fa-phone"></i>&nbsp;8097338559</p> 
+			 <p><i class="fas fa-home"></i>&nbsp;98, C.V.Raman, IIT BHU, Varanasi, 221005.</p> 
+			 <div class="copyright">
+			     <p>&copy;2019 EntWik. All rights reserved.</p>
+			 </div>
+			 <p style="font-size: 13px">Website developed by: Parth Ambre | Ronit Raj</p>
+		 </footer>
+         <script src="{% static 'js/script.js' %}"></script>
+		 <script src="{% static 'js/script2.js' %}"></script>
+		 <script src="{% static 'js/script3.js' %}"></script>
+   </body>

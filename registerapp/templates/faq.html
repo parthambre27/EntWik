@@ -1,0 +1,196 @@
+{% load static %}
+<head>
+      <title>FAQ| EntWik: Frequently Asked Questions</title>
+		 <meta charset="UTF-8">
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		 <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		 <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed&display=swap" rel="stylesheet">
+		 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+		 <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+		 <script src="https://kit.fontawesome.com/e30a91579f.js" crossorigin="anonymous"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		 <link rel="icon" href="{% static 'img/favicon.ico' %}">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+h1, h3, button{
+font-family: 'Poppins', sans-serif;
+    
+}
+
+.panel p {
+   font-family: 'Roboto', sans-serif;
+  text-align: left;
+}
+
+body{
+  text-align: center;
+  overflow-y: scroll; 
+}
+
+h1 {
+ margin: 20px auto 0;
+}
+
+h3 {
+ margin: 0px auto 40px;
+}
+
+.accordion {
+  background-color: #61A8BC;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 1000px;
+  min-height: 70px;
+  margin:  10px auto 0;
+  border: none;
+  border-radius: 10px;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.accordion:hover {
+  background: #6696a3;
+  color: white;
+}
+
+
+.active {
+  
+  background: #6696a3;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.accordion:after {
+  content: '\002B';
+    color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+    color: white;
+}
+
+.accordion:hover .button:after{
+    color: white;
+}
+
+.panel {
+  color: white;
+  width: 1000px;
+  margin: auto;
+  padding: 0 18px;
+  background-color: #174C57;
+  max-height: 0;
+  font-size: 20px;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+  transition: max-height 0.2s ease-out;
+}
+
+footer {
+ margin-top: 100px;
+ padding-top: 1px;
+}
+
+.copyright {
+    margin-top: 0px;
+}
+
+#logo{ 
+   position: fixed;
+   top: 30px;
+   left: 20px;
+   height: 60px;
+   transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 768px){
+.accordion, .panel{
+  width: 300px;
+}
+
+#logo{ 
+   top: 35px;
+   left: 10px;
+   height: 35px;
+
+}
+
+}
+</style>
+</head>
+<body>
+ <a><img src="{% static 'img/logo.png' %}" id="logo"></img></a>
+<h1>FAQ</h1>
+<h3>Frequently Asked Questions</h3>
+<button class="accordion">From where I will get a user name and password?</button>
+<div class="panel">
+  <p>When you fill the form, you will receive a mail with login credentials in it.</p>
+</div>
+
+<button class="accordion">My app is not uploaded on Play Store yet. What do I do?</button>
+<div class="panel">
+  <p>App is generally uploaded within 10 days of submission. If it is not uploaded even after a week you can contact us via mail or phone.</p>
+</div>
+
+<button class="accordion">How can I upload my app?</button>
+<div class="panel">
+  <p> Click on the upload button on the home screen and fill the required details and submit it.</p>
+</div>
+
+<button class="accordion">How do I check the status of my app?</button>
+<div class="panel">
+  <p>On submission of app, id and password are generated for your upload. You can use these details to login and checking status.</p>
+</div>
+
+<button class="accordion">Why do you do it all for free?</button>
+<div class="panel">
+  <p>We do it for free, and in exchange, we get some equity in your app.</p>
+</div>
+
+<button class="accordion">How much equity will you take?</button>
+<div class="panel">
+  <p> It varies according to various factors such as:<br>
+1. How much money we invest per installation<br>
+2.Time taken to reach 100k  installation<br>
+3.Money that we will earn from your app.<br>
+4. The time that we will spend to fix your bugs and designs.</p>
+</div>
+
+<footer>
+			 <div class="copyright">
+			     <p>&copy;2019 EntWik. All rights reserved.</p>
+			 </div>
+		 </footer>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+	  document.getElementById("logo").style.transform = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+	  document.getElementById("logo").style.transform = "rotate(360deg)";
+    } 
+  });
+}
+</script>
+
+</body>
+

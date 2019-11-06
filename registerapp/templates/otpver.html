@@ -1,0 +1,73 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<h2>Register A New App</h2>
+<form method="POST" id="data">
+{% csrf_token %}
+<div class="input-group mb-3">
+    <input
+    type="text"
+    class="form-control"
+    placeholder="OTP"
+    id="otp"
+    name="otp"
+    />
+</div>
+<div class="input-group mb-3">
+    <input type="submit" class="form-control" id="btn" value="Register" />
+</div>
+</form>
+<button id="otpbtn">Send OTP</button>
+
+
+  {% if user.is_authenticated %}
+  {{user.username}}
+  
+  {% endif %}
+  <script>
+    $("form#data").submit(function(e) {
+      e.preventDefault();    
+      var formData = new FormData(this);
+  
+      $.ajax({
+          url: window.location.pathname,
+          type: 'POST',
+          data: formData,
+          success: function (data) {
+            document.location="upload/";
+            
+          },
+          cache: false,
+          contentType: false,
+          processData: false
+      });
+  });
+  </script>
+
+  <script>
+  $("#otpbtn").click(function() {
+    otp = document.getElementById("otp").value;
+    
+      
+        $.ajax({
+          url: "{% url 'verify' %}",
+          method: "GET",
+          data: {
+            otp:otp
+          },
+          success: function(data) {
+            if (data["otp"] == otp) {
+              alert("Account Successfully Created");
+              
+            } else {
+              alert("Unable to Create Your Account");
+            }
+          },
+          
+        });
+      
+    
+  });
+
+  </script>
+  

@@ -1,0 +1,133 @@
+
+* {
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	background-color: #D3E7EC;;
+}
+
+form{
+margin: auto;
+	background: white;
+	border: none;
+	border-radius: 12px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80vw;
+		height: 80vh;
+	/*stacking fieldsets above each other*/
+	position: relative;
+	text-align: center;
+	top: 10vh;
+	}
+	
+	h1{
+		font-size: 40px;
+		font-family: 'Montserrat', sans-serif;
+		color: #54575D;
+		font-weight: 600;
+	}
+	
+	p{
+		font-size: 20px;
+		font-family: 'Montserrat', sans-serif;
+		color: #54575D;
+		margin-bottom: 20px;
+	}
+	
+	.form-content {
+     margin-top: 20px;
+	 margin-bottom: 10px;
+	height: 76%;
+	overflow-y: auto;
+}
+
+/*inputs*/
+form input, form textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #54575D;
+	font-size: 13px;
+}
+
+.uneditable{
+	color: #999;
+}
+
+/*buttons*/
+form .submit {
+	width: 100px;
+	background: #72A7B6;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+
+ input:focus, textarea:focus, select:focus {
+        outline: none !important;
+		border: 2px solid #ccc !important;
+    }
+	
+	.profile-pic {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.file-upload {
+    display: none;
+}
+.circle {
+    border-radius: 200px !important;
+    width: 200px;
+    height: 200px;
+    border: 8px solid rgba(255, 255, 255, 0.7);
+    position: relative;
+    margin: auto;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	-webkit-box-shadow: 0px 5px 19px -1px rgba(84, 87, 93, 0.2);
+-moz-box-shadow: 0px 5px 19px -1px rgba(84, 87, 93, 0.2);
+box-shadow: 0px 5px 19px -1px rgba(84, 87, 93, 0.2);
+}
+img {
+    border-radius: 200px;
+    width: 100%;
+    height: 100%;
+  object-fit: cover;
+}
+.p-image {
+  position: absolute;
+  bottom: 12%;
+  right: 0;
+  font-size: 20px;
+  color: #999;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.upload-button {
+  font-size: 1.2em;
+}
+
+.upload-button:hover {
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  color: #80CF7C;
+  
+}

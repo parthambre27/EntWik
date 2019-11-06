@@ -1,0 +1,46 @@
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/e30a91579f.js" crossorigin="anonymous"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body> 
+     <a href="index.html"><img src="{% static 'img/logo.png' %}"></img></a>
+     <form id="msform" method="POST">
+	     <h1>Login</h1>
+		   <input type="text" required name="username" id="username" placeholder="ID" />
+		    <input type="password" required name="password" id="password" placeholder="Password" />
+			<input type="submit" name="submit" class="submit" value="Login" />
+	 </form>
+</body>
+<script>
+$("form#msform").submit(function(e) {
+      e.preventDefault();    
+      var formData = new FormData(this);
+      
+      
+      $.ajax({
+          url: window.location.pathname,
+          type: 'POST',
+          data: formData,
+          success: function(data, status, xhr) {
+            if (data["message"] == 1) {
+              alert("Welcome");
+              document.location = "/dashboard/";
+            } else {
+              alert("Invalid credentials!");
+              document.location = ""
+            }
+          },
+          
+          cache: false,
+          contentType: false,
+          processData: false
+      });
+  });
+</script>
